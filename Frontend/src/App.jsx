@@ -6,6 +6,7 @@ import Markdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/github-dark.css";
 import axios from "axios";
+import { Analytics } from "@vercel/analytics/react";
 import "./App.css";
 
 function App() {
@@ -57,6 +58,7 @@ function App() {
           <Markdown rehypePlugins={[rehypeHighlight]}>{review}</Markdown>
         </div>
       </main>
+      <Analytics />
     </>
   );
 }
